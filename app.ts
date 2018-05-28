@@ -8,7 +8,7 @@ import * as bodyParser from 'body-parser';
 import Axios, { AxiosResponse } from 'axios';
 
 
-const mongoUrl = process.env.MONGODB_URI || 'mongodb://heroku_cfvtxn6c:2h5fdtm53pd5t5lt6o932nf3it@ds163418.mlab.com:63418/heroku_cfvtxn6c';
+const mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/todo-list-api';
 mongoose.connect(mongoUrl);
 const app = express();
 app.use(bodyParser.json({type: '*/*'}));
